@@ -1,0 +1,91 @@
+Create Table Dim_Store(
+
+Store_Number int NOT NULL,
+Store_Name   varchar(50) NULL,
+Store_Status char(1) NULL,
+CONSTRAINT PK1 PRIMARY KEY NONCLUSTERED(Store_Number)
+);
+
+Create Table Dim_Product(
+
+Item_Number int NOT NULL,
+Item_Description varchar(100) NULL,
+UPC numeric NULL,
+SCC numeric NULL,
+CONSTRAINT PK2 PRIMARY KEY NONCLUSTERED(Item_Number)
+);
+
+Create Table Dim_Address(
+
+Address_ID int NOT NULL,
+Address_Line varchar(50) NULL,
+City  char(50) NULL,
+State char(20) NULL,
+County_Number int NULL,
+County_Name   char(50) NULL,
+CONSTRAINT PK3 PRIMARY KEY NONCLUSTERED(Address_ID)
+);
+
+Create Table Dim_Vendor(
+
+Vendor_Number int NOT NULL,
+Vendor_Name  char(50) NULL,
+CONSTRAINT PK4 PRIMARY KEY NONCLUSTERED(Vendor_Number)
+);
+
+Create Table Dim_Category(
+
+Category_Number int NOT NULL,
+Category_Name   char(50) NULL,
+CONSTRAINT PK5 PRIMARY KEY NONCLUSTERED(Category_Number)
+);
+
+Create Table Dim_Date(
+
+Date  date NOT NULL,
+Month char(20) NULL,
+Year  int NULL
+CONSTRAINT PK6 PRIMARY KEY NONCLUSTERED(Date)
+);
+
+Create Table Fact_Liquor_Sales(
+
+Sales_ID int NOT NULL,
+Store_Number int NOT NULL,
+Item_Number int NOT NULL,
+Address_ID int NOT NULL,
+Vendor_Number int NOT NULL,
+Category_Number int NOT NULL,
+Pack int NUll,
+Age int NULL,
+Date  date NOT NULL,
+Bottle_Volume int NULL,
+State_Bottle_Cost float NULL,
+State_Bottle_Retail float NULL,
+Bottles_Sold int NULL,
+Volume_Sold_Liters float NULL,
+Volume_Sold_Gallons float NULL,
+Sale float NULL,
+Invoice_Number varchar(100) NOT NULL,
+CONSTRAINT PK7 PRIMARY KEY NONCLUSTERED(Sales_ID),
+CONSTRAINT RefDim_Store415 FOREIGN KEY (Store_Number)
+REFERENCES Dim_Store(Store_Number),
+CONSTRAINT RefDim_Product416 FOREIGN KEY (Item_Number)
+REFERENCES Dim_Product(Item_Number),
+CONSTRAINT RefDim_Address417 FOREIGN KEY (Address_ID)
+REFERENCES Dim_Address(Address_ID),
+CONSTRAINT RefDim_Vendor418 FOREIGN KEY (Vendor_Number)
+REFERENCES Dim_Vendor(Vendor_Number),
+CONSTRAINT RefDim_Category419 FOREIGN KEY (Category_Number)
+REFERENCES Dim_Category(Category_Number),
+CONSTRAINT RefDim_Date420 FOREIGN KEY (Date)
+REFERENCES Dim_Date(Date)
+);
+
+
+
+
+
+
+
+
