@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="29" y="5" width="313" height="193" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Iowa_LIquor_Stores</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+          <Caption>Iowa_LIquor_Stores</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="54" y="54" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\amuly\Downloads\Iowa_Liquor_Stores.tsv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>\t</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Iowa_Liquor_Stores.tsv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Store" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Stores.tsv" type="V_WString" />
+                <Field name="Name" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Stores.tsv" type="V_WString" />
+                <Field name="Store Status" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Stores.tsv" type="V_WString" />
+                <Field name="Address" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Stores.tsv" type="V_WString" />
+                <Field name="City" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Stores.tsv" type="V_WString" />
+                <Field name="State" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Stores.tsv" type="V_WString" />
+                <Field name="Zip Code" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Stores.tsv" type="V_WString" />
+                <Field name="Store Address" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Stores.tsv" type="V_WString" />
+                <Field name="Report Date" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Stores.tsv" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="246" y="54" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\amuly\AppData\Local\Temp\Engine_25048_2f2544d0634349e58d5c9e0162ed7291_\Engine_11704_4457914de2b9424f8bbf5e1acba1df5f_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>TB</ViewMode>
+                <ViewSize value="55" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints />
+                </View2>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+            <Position x="150" y="54" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Limit_UniqueCount>10000</Limit_UniqueCount>
+              <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
+              <IsMetric value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings>
+            <Position x="186" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Select Fields">Store=True,Name=True,Store Status=True,Address=True,City=True,State=True,Zip Code=True,Store Address=True,Report Date=True</Value>
+              <Value name="Sample Data">False</Value>
+              <Value name="Number">True</Value>
+              <Value name="NNumber">5000</Value>
+              <Value name="Percent">False</Value>
+              <Value name="NPercent">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Field_Summary_Report.yxmc" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="258" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\amuly\AppData\Local\Temp\Engine_25048_2f2544d0634349e58d5c9e0162ed7291_\Engine_11704_aeda9fb870894401936688c6313fd53a_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="353" y="16" width="289" height="193" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Iowa_LIquor_Products</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="378" y="65" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>\t</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Iowa_Liquor_Products.tsv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Item Number" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="Category Name" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="Item Description" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="Vendor" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="Vendor Name" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="Bottle Volume (ml)" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="Pack" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="Inner Pack" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="Age" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="Proof" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="List Date" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="UPC" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="SCC" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="State Bottle Cost" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="State Case Cost" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="State Bottle Retail" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+                <Field name="Report Date" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Products.tsv" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="534" y="66" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\amuly\AppData\Local\Temp\Engine_10928_4766c0fc36244cf5a42def6064ad402b_\Engine_11704_50bf96bb9c2d404896ab06f1fed7aed2_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="14">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BasicDataProfile.BasicDataProfile">
+            <Position x="462" y="66" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Limit_UniqueCount>10000</Limit_UniqueCount>
+              <Limit_UniqueValuesSize>1000</Limit_UniqueValuesSize>
+              <IsMetric value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBasicDataProfile" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings>
+            <Position x="486" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Select Fields">Item Number=True,Category Name=True,Item Description=True,Vendor=True,Vendor Name=True,Bottle Volume (ml)=True,Pack=True,Inner Pack=True,Age=True,Proof=True,List Date=True,UPC=True,SCC=True,State Bottle Cost=True,State Case Cost=True,State Bottle Retail=True,Report Date=True</Value>
+              <Value name="Sample Data">False</Value>
+              <Value name="Number">True</Value>
+              <Value name="NNumber">5000</Value>
+              <Value name="Percent">False</Value>
+              <Value name="NPercent">10</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings Macro="Predictive Tools\Field_Summary_Report.yxmc" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="558" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\amuly\AppData\Local\Temp\Engine_10928_4766c0fc36244cf5a42def6064ad402b_\Engine_11704_10bf7e120a0b4b1189cfa316c411dc05_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Report</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="641" y="17" width="265" height="165" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Iowa_LIquor_Sales</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+          <Caption>Iowa_LIquor_Sales</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Caption>Iowa_LIquor_Sales</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Caption>Iowa_LIquor_Sales</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Caption>Iowa_LIquor_Sales</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Caption>Iowa_LIquor_Sales</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="666" y="66" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="100" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>\t</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Iowa_Liquor_Sales.tsv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Invoice/Item Number" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Date" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Store Number" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Store Name" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Address" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="City" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Zip Code" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Store Location" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="County Number" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="County" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Category" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Category Name" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Vendor Number" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Vendor Name" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Item Number" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Item Description" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Pack" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Bottle Volume (ml)" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="State Bottle Cost" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="State Bottle Retail" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Bottles Sold" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Sale (Dollars)" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Volume Sold (Liters)" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+                <Field name="Volume Sold (Gallons)" size="254" source="File: C:\Users\amuly\Downloads\Iowa_Liquor_Sales.tsv" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="822" y="66" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\amuly\AppData\Local\Temp\Engine_19304_e52c24f73af5454e8a268b5d589455e3_\Engine_11704_f4dffef12ede4b03af57939fdf2ae524_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="11" Connection="Field Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Reports" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="15" Connection="Field Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Reports" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Iowa_Products_Stores_Data_Profile</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="61380166-e5ca-4d65-906d-6752a9157fe0" />
+      <Telemetry>
+        <PreviousWorkflowId value="b3b6de1f-fbbd-4123-94f9-ed82f6f1a9f7" />
+        <OriginWorkflowId value="368eb03f-48b1-4e10-b2de-3ef0b78e10ff" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
